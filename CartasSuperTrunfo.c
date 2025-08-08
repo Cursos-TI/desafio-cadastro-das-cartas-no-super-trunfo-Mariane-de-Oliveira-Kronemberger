@@ -15,7 +15,7 @@ int main() {
     float area1, area2;
     float PIB1, PIB2;
     int turistico1, turistico2;
-    char continuar;
+    char tecla;
 
     // "Menu" do primeiro cadastro
 
@@ -44,27 +44,30 @@ int main() {
     printf("Digite o número de pontos turísticos: \n");
     scanf (" %d", &turistico1);
 
-    //estado, codigo, cidade, população, area, pib, turistico
-      printf(" "); //Para "limpar" a tela)
-      printf(" ");
-      printf(" ");
+    // "limpar" a tela)
 
-    // Carta1 aparece
+      printf(" \n"); 
+      printf(" \n");
+      printf(" \n");
+
+    // Carta 1 aparece
 
     printf ("CARTA 1\n");
     printf ("---------------------------\n");
     printf ("| Estado: %c\n", estado1);
     printf ("| Código: %s\n", codigo1);
-    printf ("| CIdade: %s\n", cidade1);
-    printf ("| População: %d\n", populacao1);
-    printf ("| Área: %f Km²\n", area1);
-    printf ("| PIB: %f\n", PIB1);
+    printf ("| Cidade: %s\n", cidade1);
+    printf ("| População: %d habitantes\n", populacao1);
+    printf ("| Área: %.2f Km²\n", area1);
+    printf ("| PIB: %.2f\n", PIB1);
     printf ("| Pontos turísticos: %d\n", turistico1);
     printf ("---------------------------\n");
-    printf ("\n[Aperte ENTER para continuar...]\n");
-    scanf (" %c", &continuar);
+    printf ("\n[Digite C para continuar...]\n");
+    scanf (" %c", &tecla);
 
-      printf(" \n"); //Para "limpar" a tela)
+    // "limpar" a tela)
+
+      printf(" \n"); 
       printf(" \n");
       printf(" \n");
       
@@ -73,7 +76,7 @@ int main() {
     printf ("======== Cadastro de Cartas ========\n");
     printf ("------------------------------------\n");
 
-    printf ("CARTA: 1\n");
+    printf ("CARTA: 2\n");
     printf ("Digite o estado [A-H]:\n");
     scanf (" %c", &estado2);
 
@@ -95,40 +98,26 @@ int main() {
     printf("Digite o número de pontos turísticos: \n");
     scanf (" %d", &turistico2);
 
-    //estado, codigo, cidade, população, area, pib, turistico
-      printf(" "); //Para "limpar" a tela)
-      printf(" ");
-      printf(" ");
+    // "limpar" a tela)
 
-    // Carta1 aparece
+      printf(" \n"); 
+      printf(" \n");
+      printf(" \n");
 
-    printf ("CARTA 1\n");
+    // Carta 2 aparece
+
+    printf ("CARTA 2\n");
     printf ("---------------------------\n");
-    printf ("| Estado: %c\n", estado1);
-    printf ("| Código: %s\n", codigo1);
-    printf ("| CIdade: %s\n", cidade1);
-    printf ("| População: %d\n", populacao1);
-    printf ("| Área: %f Km²\n", area1);
-    printf ("| PIB: %f\n", PIB1);
-    printf ("| Pontos turísticos: %d\n", turistico1);
+    printf ("| Estado: %c\n", estado2);
+    printf ("| Código: %s\n", codigo2);
+    printf ("| Cidade: %s\n", cidade2);
+    printf ("| População: %d habitantes\n", populacao2);
+    printf ("| Área: %.2f Km²\n", area2);
+    printf ("| PIB: %.2f\n", PIB2);
+    printf ("| Pontos turísticos: %d\n", turistico2);
     printf ("---------------------------\n");
-    printf ("\n[Aperte ENTER para continuar...]\n");
-    
+    printf ("\n[Digite C para encerrar...]\n");
+    scanf (" %c", &tecla);
+
     return 0;
 }
-
-/*Carta 1:
-
-Estado: A
-
-Código: A01
-
-Nome da Cidade: São Paulo
-
-População: 12325000
-
-Área: 1521.11 km²
-
-PIB: 699.28 bilhões de reais
-
-Número de Pontos Turísticos: 50*/

@@ -24,6 +24,7 @@ int main() {
     int turistico1, turistico2;
     char tecla;
     float densidade1, densidade2;
+    float superpoder1, superpoder2;
 
     // "Menu" do primeiro cadastro
 
@@ -68,7 +69,11 @@ int main() {
 
     PIBcapita1 = PIBbilhao1 / populacao1;
 
-    // "limpar" a tela)
+    // Calculo super poder
+
+    superpoder1 = (float) (populacao1 + area1 + PIB1 + turistico1 + PIBcapita1) + (1/densidade1);
+
+    // "Limpar" a tela)
     
       printf(" \n"); 
       printf(" \n");
@@ -87,6 +92,7 @@ int main() {
     printf ("| Pontos turísticos: %d\n", turistico1);
     printf ("| Densidade populacional: %.2f hab/km²\n", densidade1);
     printf ("| PIB per capita: %.2f reais\n", PIBcapita1);
+    printf ("| Super Poder: %.2f\n", superpoder1);
     printf ("---------------------------\n");
     printf ("\n[Digite C para continuar...]\n");
     scanf (" %c", &tecla);
@@ -133,7 +139,7 @@ int main() {
     scanf (" %d", &turistico2);
     limpaBuffer();
 
-     // Calculo densidade populacional
+    // Calculo densidade populacional
 
     densidade2 = (float) populacao2 / area2;
 
@@ -141,7 +147,11 @@ int main() {
 
     PIBcapita2 = PIBbilhao2 / populacao2;
 
-    // "limpar" a tela)
+       // Calculo super poder
+
+    superpoder2 = (float) (populacao2 + area2 + PIB2 + turistico2 + PIBcapita2) + (1/densidade2);
+
+    // "Limpar" a tela)
 
       printf(" \n"); 
       printf(" \n");
@@ -160,10 +170,42 @@ int main() {
     printf ("| Pontos turísticos: %d\n", turistico2);
     printf ("| Densidade populacional: %.2f hab/km²\n", densidade2);
     printf ("| PIB per capita: %.2f reais\n", PIBcapita2);
+    printf ("| Super poder: %.2f\n", superpoder2);
     printf ("---------------------------\n");
+    printf ("\n[Digite C para comparar...]\n");
+    scanf (" %c", &tecla);
+    limpaBuffer();
+
+   // "Limpar" a tela)
+
+      printf(" \n"); 
+      printf(" \n");
+      printf(" \n");
+
+   // Comparação de cartas
+      
+    printf ("======== Comparação das Cartas ========\n");
+    printf ("---------------------------------------\n");
+    printf("%s x %s ", cidade1, cidade2);
+    printf("(%s = 1 | %s = 0)\n", cidade1, cidade2);
+
+    printf("População: %d\n", (populacao1 > populacao2));
+    printf("Área: %d\n", (area1 > populacao1));
+    printf("PIB: %d\n", (PIB1 > PIB2));
+    printf("Pontos turísticos: %d\n", (turistico1 > turistico2));
+    printf("Densidade populacional: %d\n", (densidade1 < densidade2));
+    printf("PIB per capita: %d\n", (PIBcapita1 > PIBcapita2));
+    printf("Super poder: %d\n", (superpoder1 > superpoder2));
     printf ("\n[Digite C para encerrar...]\n");
     scanf (" %c", &tecla);
     limpaBuffer();
 
     return 0;
+
 }
+
+/*Calcular o Super Poder: Para cada carta, calcule o "Super Poder" 
+somando todos os atributos numéricos 
+(população, área, PIB, número de pontos turísticos, PIB per capita e o inverso da densidade populacional –
+ quanto menor a densidade, maior o "poder"). Armazene o Super Poder como float. 
+ Atenção: Preste muita atenção na conversão de tipos ao somar valores de tipos diferentes!*/

@@ -203,9 +203,3 @@ int main() {
     return 0;
 
 }
-
-/*Calcular o Super Poder: Para cada carta, calcule o "Super Poder" 
-somando todos os atributos numéricos 
-(população, área, PIB, número de pontos turísticos, PIB per capita e o inverso da densidade populacional –
- quanto menor a densidade, maior o "poder"). Armazene o Super Poder como float. 
- Atenção: Preste muita atenção na conversão de tipos ao somar valores de tipos diferentes!*/
